@@ -29,7 +29,7 @@ relationship are as follows:
 
 Arrow App is used to create a Graph data model. The json export of the data model can be found in directory.
 
-![img.png](app/images/data-model.png)
+![img.png](images/data-model.png)
 
 ***
 
@@ -41,7 +41,7 @@ Neo4j Data importer can be accessed via below link:
 
 https://data-importer.graphapp.io
 
-![img_1.png](app/images/data-importer.png)
+![img_1.png](images/data-importer.png)
 
 The data is ingested into Neo4j database by running the data importer.
 
@@ -112,13 +112,13 @@ pip install -r requirements.txt
 
 4. Create Blank Database in Neo4j - https://sandbox.neo4j.com
 
-![neo_sandbox.png](app/images/neo_sandbox.png)
+![neo_sandbox.png](images/neo_sandbox.png)
 
 6. Import the Data Model JSON in Data Importer UI - https://data-importer.graphapp.io
 7. Connect Data Importer to Neo4j database
 8. Run Data Importer to ingest data into Neo4j database
 
-![data-importer-status.png](app/images/data-importer-status.png)
+![data-importer-status.png](images/data-importer-status.png)
 
 10. Set Neo4j database credentials in .env file
 11. Run FastAPI application
@@ -135,7 +135,7 @@ uvicorn main:app --reload
 
 13. Perform CRUD operations using the API endpoints
 
-![api-endpoints.png](app/images/api-endpoints.png)
+![api-endpoints.png](images/api-endpoints.png)
 
 ***
 
