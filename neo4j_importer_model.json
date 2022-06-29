@@ -1,0 +1,1501 @@
+{
+  "version": "0.2.0-beta.2",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n3",
+        "position": {
+          "x": 627.2403361344539,
+          "y": 297.4033613445378
+        },
+        "caption": "Categories"
+      },
+      {
+        "id": "n4",
+        "position": {
+          "x": 627.2403361344539,
+          "y": -503.9784456322022
+        },
+        "caption": "Customer"
+      },
+      {
+        "id": "n5",
+        "position": {
+          "x": 425.75097521361465,
+          "y": -133.346218487395
+        },
+        "caption": "Employee"
+      },
+      {
+        "id": "n6",
+        "position": {
+          "x": 627.2403361344539,
+          "y": -133.346218487395
+        },
+        "caption": "Order"
+      },
+      {
+        "id": "n7",
+        "position": {
+          "x": 627.2403361344539,
+          "y": 82.0285714285714
+        },
+        "caption": "Product"
+      },
+      {
+        "id": "n8",
+        "position": {
+          "x": 879.2681679587589,
+          "y": 82.0285714285714
+        },
+        "caption": "Supplier"
+      },
+      {
+        "id": "n10",
+        "position": {
+          "x": 89.1243040638762,
+          "y": -133.346218487395
+        },
+        "caption": "EmpDetail"
+      },
+      {
+        "id": "n11",
+        "position": {
+          "x": 879.2681679587589,
+          "y": -133.346218487395
+        },
+        "caption": "Address"
+      },
+      {
+        "id": "n12",
+        "position": {
+          "x": 1093.6415808035856,
+          "y": 82.0285714285714
+        },
+        "caption": "Address"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n0",
+        "type": "CONTAINS",
+        "fromId": "n6",
+        "toId": "n7"
+      },
+      {
+        "id": "n1",
+        "type": "SUPPLY",
+        "fromId": "n8",
+        "toId": "n7"
+      },
+      {
+        "id": "n2",
+        "type": "ARE_IN",
+        "fromId": "n7",
+        "toId": "n3"
+      },
+      {
+        "id": "n3",
+        "type": "SOLD",
+        "fromId": "n5",
+        "toId": "n6"
+      },
+      {
+        "id": "n4",
+        "type": "PLACED",
+        "fromId": "n4",
+        "toId": "n6"
+      },
+      {
+        "id": "n5",
+        "type": "EMP_DETAILS",
+        "fromId": "n5",
+        "toId": "n10"
+      },
+      {
+        "id": "n6",
+        "type": "SHIPPED_TO",
+        "fromId": "n6",
+        "toId": "n11"
+      },
+      {
+        "id": "n7",
+        "type": "LOCATED_AT",
+        "fromId": "n8",
+        "toId": "n12"
+      },
+      {
+        "id": "n9",
+        "type": "REPORTS_TO",
+        "fromId": "n5",
+        "toId": "n5"
+      }
+    ]
+  },
+  "dataModel": {
+    "fileModel": {
+      "fileSchemas": {
+        "processed-northwind-categories.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "categoryID",
+              "type": "string",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "categoryName",
+              "type": "string",
+              "sample": "Beverages",
+              "include": true
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "sample": "Soft drinks, coffees, teas, beers, and ales",
+              "include": true
+            },
+            {
+              "name": "picture",
+              "type": "string",
+              "sample": "0x151C2F00020000000D000E0014002100FFFFFFFF4269746D617020496D616765005061696E742E5069637475726500010500000200000007000000504272757368000000000000000000A0290000424D98290000000000005600000028000000AC00000078000000010004000000000000000000880B0000880B0000080000",
+              "include": true
+            }
+          ]
+        },
+        "processed-northwind-customers.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "customerID",
+              "type": "string",
+              "sample": "ALFKI",
+              "include": true
+            },
+            {
+              "name": "companyName",
+              "type": "string",
+              "sample": "Alfreds Futterkiste",
+              "include": true
+            },
+            {
+              "name": "contactName",
+              "type": "string",
+              "sample": "Maria Anders",
+              "include": true
+            },
+            {
+              "name": "contactTitle",
+              "type": "string",
+              "sample": "Sales Representative",
+              "include": true
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "sample": "Obere Str. 57",
+              "include": true
+            },
+            {
+              "name": "city",
+              "type": "string",
+              "sample": "Berlin",
+              "include": true
+            },
+            {
+              "name": "region",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "postalCode",
+              "type": "string",
+              "sample": "12209",
+              "include": true
+            },
+            {
+              "name": "country",
+              "type": "string",
+              "sample": "Germany",
+              "include": true
+            },
+            {
+              "name": "phone",
+              "type": "string",
+              "sample": "030-0074321",
+              "include": true
+            },
+            {
+              "name": "fax",
+              "type": "string",
+              "sample": "030-0076545",
+              "include": true
+            }
+          ]
+        },
+        "processed-northwind-employees.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "employeeID",
+              "type": "string",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "lastName",
+              "type": "string",
+              "sample": "Davolio",
+              "include": true
+            },
+            {
+              "name": "firstName",
+              "type": "string",
+              "sample": "Nancy",
+              "include": true
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "sample": "Sales Representative",
+              "include": true
+            },
+            {
+              "name": "titleOfCourtesy",
+              "type": "string",
+              "sample": "Ms.",
+              "include": true
+            },
+            {
+              "name": "birthDate",
+              "type": "string",
+              "sample": "1948-12-08 00:00:00.000",
+              "include": true
+            },
+            {
+              "name": "hireDate",
+              "type": "string",
+              "sample": "1992-05-01 00:00:00.000",
+              "include": true
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "sample": "507 - 20th Ave. E. Apt. 2A",
+              "include": true
+            },
+            {
+              "name": "city",
+              "type": "string",
+              "sample": "Seattle",
+              "include": true
+            },
+            {
+              "name": "region",
+              "type": "string",
+              "sample": "WA",
+              "include": true
+            },
+            {
+              "name": "postalCode",
+              "type": "string",
+              "sample": "98122",
+              "include": true
+            },
+            {
+              "name": "country",
+              "type": "string",
+              "sample": "USA",
+              "include": true
+            },
+            {
+              "name": "homePhone",
+              "type": "string",
+              "sample": "(206) 555-9857",
+              "include": true
+            },
+            {
+              "name": "extension",
+              "type": "string",
+              "sample": "5467",
+              "include": true
+            },
+            {
+              "name": "photo",
+              "type": "string",
+              "sample": "0x151C2F00020000000D000E0014002100FFFFFFFF4269746D617020496D616765005061696E742E506963747572650001050000020000000700000050427275736800000000000000000020540000424D20540000000000007600000028000000C0000000DF0000000100040000000000A0530000CE0E0000D80E0000000000",
+              "include": true
+            },
+            {
+              "name": "notes",
+              "type": "string",
+              "sample": "Education includes a BA in psychology from Colorado State University in 1970.  She also completed &quot;The Art of the Cold Call.&quot;  Nancy is a member of Toastmasters International.",
+              "include": true
+            },
+            {
+              "name": "reportsTo",
+              "type": "string",
+              "sample": "2",
+              "include": true
+            },
+            {
+              "name": "photoPath",
+              "type": "string",
+              "sample": "http://accweb/emmployees/davolio.bmp",
+              "include": true
+            }
+          ]
+        },
+        "processed-northwind-orders.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "orderID",
+              "type": "string",
+              "sample": "10248",
+              "include": true
+            },
+            {
+              "name": "customerID",
+              "type": "string",
+              "sample": "VINET",
+              "include": true
+            },
+            {
+              "name": "employeeID",
+              "type": "string",
+              "sample": "5",
+              "include": true
+            },
+            {
+              "name": "orderDate",
+              "type": "string",
+              "sample": "1996-07-04 00:00:00.000",
+              "include": true
+            },
+            {
+              "name": "requiredDate",
+              "type": "string",
+              "sample": "1996-08-01 00:00:00.000",
+              "include": true
+            },
+            {
+              "name": "shippedDate",
+              "type": "string",
+              "sample": "1996-07-16 00:00:00.000",
+              "include": true
+            },
+            {
+              "name": "shipVia",
+              "type": "string",
+              "sample": "3",
+              "include": true
+            },
+            {
+              "name": "freight",
+              "type": "string",
+              "sample": "32.38",
+              "include": true
+            },
+            {
+              "name": "shipName",
+              "type": "string",
+              "sample": "Vins et alcools Chevalier",
+              "include": true
+            },
+            {
+              "name": "shipAddress",
+              "type": "string",
+              "sample": "59 rue de l'Abbaye",
+              "include": true
+            },
+            {
+              "name": "shipCity",
+              "type": "string",
+              "sample": "Reims",
+              "include": true
+            },
+            {
+              "name": "shipRegion",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "shipPostalCode",
+              "type": "string",
+              "sample": "51100",
+              "include": true
+            },
+            {
+              "name": "shipCountry",
+              "type": "string",
+              "sample": "France",
+              "include": true
+            }
+          ]
+        },
+        "processed-northwind-products.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "productID",
+              "type": "string",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "productName",
+              "type": "string",
+              "sample": "Chai",
+              "include": true
+            },
+            {
+              "name": "supplierID",
+              "type": "string",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "categoryID",
+              "type": "string",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "quantityPerUnit",
+              "type": "string",
+              "sample": "10 boxes x 20 bags",
+              "include": true
+            },
+            {
+              "name": "unitPrice",
+              "type": "string",
+              "sample": "18.0",
+              "include": true
+            },
+            {
+              "name": "unitsInStock",
+              "type": "string",
+              "sample": "39",
+              "include": true
+            },
+            {
+              "name": "unitsOnOrder",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "reorderLevel",
+              "type": "string",
+              "sample": "10",
+              "include": true
+            },
+            {
+              "name": "discontinued",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            }
+          ]
+        },
+        "processed-northwind-suppliers.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "supplierID",
+              "type": "string",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "companyName",
+              "type": "string",
+              "sample": "Exotic Liquids",
+              "include": true
+            },
+            {
+              "name": "contactName",
+              "type": "string",
+              "sample": "Charlotte Cooper",
+              "include": true
+            },
+            {
+              "name": "contactTitle",
+              "type": "string",
+              "sample": "Purchasing Manager",
+              "include": true
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "sample": "49 Gilbert St.",
+              "include": true
+            },
+            {
+              "name": "city",
+              "type": "string",
+              "sample": "London",
+              "include": true
+            },
+            {
+              "name": "region",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "postalCode",
+              "type": "string",
+              "sample": "EC1 4SD",
+              "include": true
+            },
+            {
+              "name": "country",
+              "type": "string",
+              "sample": "UK",
+              "include": true
+            },
+            {
+              "name": "phone",
+              "type": "string",
+              "sample": "(171) 555-2222",
+              "include": true
+            },
+            {
+              "name": "fax",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "homePage",
+              "type": "string",
+              "sample": "",
+              "include": true
+            }
+          ]
+        },
+        "processed-northwond-order-details.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "orderID",
+              "type": "string",
+              "sample": "10248",
+              "include": true
+            },
+            {
+              "name": "productID",
+              "type": "string",
+              "sample": "11",
+              "include": true
+            },
+            {
+              "name": "unitPrice",
+              "type": "string",
+              "sample": "14.0",
+              "include": true
+            },
+            {
+              "name": "quantity",
+              "type": "string",
+              "sample": "12",
+              "include": true
+            },
+            {
+              "name": "discount",
+              "type": "string",
+              "sample": "0.0",
+              "include": true
+            }
+          ]
+        }
+      }
+    },
+    "graphModel": {
+      "nodeSchemas": {
+        "n3": {
+          "label": "Categories",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "categoryID",
+              "type": "integer",
+              "identifier": "v-0hsc9cRpurfj_hXBQpt"
+            },
+            {
+              "property": "categoryName",
+              "type": "string",
+              "identifier": "MEIrKHCm7LX6cCKac1Iy2"
+            },
+            {
+              "property": "description",
+              "type": "string",
+              "identifier": "24oux08KUoNSWcLdEaj_T"
+            }
+          ],
+          "key": {
+            "properties": [
+              "v-0hsc9cRpurfj_hXBQpt"
+            ],
+            "name": ""
+          }
+        },
+        "n4": {
+          "label": "Customer",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "customerID",
+              "type": "string",
+              "identifier": "iKXrUMRwo9wbJzee97OCK"
+            },
+            {
+              "property": "contactName",
+              "type": "string",
+              "identifier": "7ZOK0OZVWz-ofX90p0FdP"
+            },
+            {
+              "property": "contactTitle",
+              "type": "string",
+              "identifier": "2CNpKZa-YeOXZEKgJYxyj"
+            },
+            {
+              "property": "phone",
+              "type": "integer",
+              "identifier": "dGsyTnSzK2oKA5pX0Wt0v"
+            },
+            {
+              "property": "fax",
+              "type": "integer",
+              "identifier": "q2Uf6Zs5unCROT0tF76dX"
+            }
+          ],
+          "key": {
+            "properties": [
+              "iKXrUMRwo9wbJzee97OCK"
+            ],
+            "name": ""
+          }
+        },
+        "n5": {
+          "label": "Employee",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "employeeId",
+              "type": "integer",
+              "identifier": "YrE3_2YstPec8LCMAkY5a"
+            },
+            {
+              "property": "lastName",
+              "type": "string",
+              "identifier": "S7i_ig9DxuyeotWy5Z1mE"
+            },
+            {
+              "property": "firstName",
+              "type": "string",
+              "identifier": "kn0T6dDxRuNK5vE_zD2fS"
+            },
+            {
+              "property": "title",
+              "type": "string",
+              "identifier": "6lzfRV5G0xDaPojluviEs"
+            },
+            {
+              "property": "reportsTo",
+              "type": "integer",
+              "identifier": "0QUjKwSS07PFdwNoQltF-"
+            }
+          ],
+          "key": {
+            "properties": [
+              "YrE3_2YstPec8LCMAkY5a"
+            ],
+            "name": ""
+          }
+        },
+        "n6": {
+          "label": "Order",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "orderID",
+              "type": "integer",
+              "identifier": "DsWmrVIH9twVyKcIlmgrY"
+            },
+            {
+              "property": "orderDate",
+              "type": "string",
+              "identifier": "QZiaR1BmORol4nJ8rsUVN"
+            },
+            {
+              "property": "requiredDate",
+              "type": "string",
+              "identifier": "_LP0PAbuzaHFxLXJqy9G7"
+            },
+            {
+              "property": "freight",
+              "type": "float",
+              "identifier": "qGLGRNmSHsb1yLsDwHRgL"
+            },
+            {
+              "property": "shippedDate",
+              "type": "string",
+              "identifier": "uHYORlvsmarYcKE-J0O5l"
+            },
+            {
+              "property": "shipVia",
+              "type": "integer",
+              "identifier": "UBUGl68oevLnUU44qhSr6"
+            }
+          ],
+          "key": {
+            "properties": [
+              "DsWmrVIH9twVyKcIlmgrY"
+            ],
+            "name": ""
+          }
+        },
+        "n7": {
+          "label": "Product",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "productID",
+              "type": "integer",
+              "identifier": "X4uzPQNU8pdNdCi9kRyPT"
+            },
+            {
+              "property": "productName",
+              "type": "string",
+              "identifier": "UD45FxwVYzxX3wX4ww45g"
+            },
+            {
+              "property": "quantityPerUnit",
+              "type": "string",
+              "identifier": "JwEsozM36Myzu976vItjM"
+            },
+            {
+              "property": "unitPrice",
+              "type": "integer",
+              "identifier": "RoSEDay4uxAqj7AOHZ3Om"
+            },
+            {
+              "property": "discontinued",
+              "type": "boolean",
+              "identifier": "1s8rlM0A6vIV8RbU-WfRa"
+            }
+          ],
+          "key": {
+            "properties": [
+              "X4uzPQNU8pdNdCi9kRyPT"
+            ],
+            "name": ""
+          }
+        },
+        "n8": {
+          "label": "Supplier",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "supplierID",
+              "type": "integer",
+              "identifier": "dLIQWEhCi6pu8d1wm5KKQ"
+            },
+            {
+              "property": "companyName",
+              "type": "string",
+              "identifier": "w3fIyCPQgsF8CfhZ1d3yy"
+            },
+            {
+              "property": "contactName",
+              "type": "string",
+              "identifier": "1VIIpdHbANU6KzDVdHcFo"
+            },
+            {
+              "property": "contactTitle",
+              "type": "string",
+              "identifier": "SHRk4NCLwOY6XMcphDeRa"
+            },
+            {
+              "property": "phone",
+              "type": "string",
+              "identifier": "WcCPfyTvsvvwtrrm17Knk"
+            },
+            {
+              "property": "fax",
+              "type": "string",
+              "identifier": "SlCZKRT2fPT0an9jKfeiT"
+            },
+            {
+              "property": "homePage",
+              "type": "string",
+              "identifier": "ChywfiyfIdouKUYA5X1EV"
+            }
+          ],
+          "key": {
+            "properties": [
+              "dLIQWEhCi6pu8d1wm5KKQ"
+            ],
+            "name": ""
+          }
+        },
+        "n10": {
+          "label": "EmpDetail",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "employeeId",
+              "type": "integer",
+              "identifier": "35PfwWPMnM7fFNE9HYUwJ"
+            },
+            {
+              "property": "birthDate",
+              "type": "string",
+              "identifier": "-r3XqopB5ziKakN4lyzuZ"
+            },
+            {
+              "property": "hireDate",
+              "type": "string",
+              "identifier": "kwTc4YJ8g4z8h4-7AKw14"
+            },
+            {
+              "property": "address",
+              "type": "string",
+              "identifier": "1MPFYVah3khjQ7yh7YlGl"
+            },
+            {
+              "property": "city",
+              "type": "string",
+              "identifier": "GjAgSHPuNyDcDy8T9JbkZ"
+            },
+            {
+              "property": "region",
+              "type": "string",
+              "identifier": "_QJBJ_J0LnW7tEx8gB1eD"
+            },
+            {
+              "property": "postalCode",
+              "type": "integer",
+              "identifier": "kEKlwasbQnwB07WxyRsBT"
+            },
+            {
+              "property": "country",
+              "type": "string",
+              "identifier": "qcd2TDyVEyyMhxzC1LqRX"
+            },
+            {
+              "property": "homePhone",
+              "type": "integer",
+              "identifier": "u_CJXEptbq_xqsDgidjqc"
+            },
+            {
+              "property": "extension",
+              "type": "integer",
+              "identifier": "ofqg6ozOUq0oA_3LOyAkm"
+            },
+            {
+              "property": "notes",
+              "type": "string",
+              "identifier": "vFB7AfVoHtZ4_29NCU2Wt"
+            },
+            {
+              "property": "photoPath",
+              "type": "string",
+              "identifier": "5Uh2Jx9_WS2HPfwx7UA_B"
+            },
+            {
+              "property": "titleOfCourtesy",
+              "type": "string",
+              "identifier": "352OHKUPNfMse2z7jpniP"
+            }
+          ],
+          "key": {
+            "properties": [
+              "35PfwWPMnM7fFNE9HYUwJ"
+            ],
+            "name": ""
+          }
+        },
+        "n11": {
+          "label": "Address",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "companyName",
+              "type": "string",
+              "identifier": "G1QuGs1YF7HOzJ__DwqtD"
+            },
+            {
+              "property": "address",
+              "type": "string",
+              "identifier": "Ajqd5Pu8rQ1IU9G6tdvVs"
+            },
+            {
+              "property": "city",
+              "type": "string",
+              "identifier": "xHZtQ5ufLv9pO-1TjJ6y9"
+            },
+            {
+              "property": "region",
+              "type": "string",
+              "identifier": "-NIp5RaVe7JKhDbHfuhog"
+            },
+            {
+              "property": "postalCode",
+              "type": "integer",
+              "identifier": "bFavT6s7OHJzG0SeUN0pC"
+            },
+            {
+              "property": "country",
+              "type": "string",
+              "identifier": "imy1PydBs6xzXVXWcMk4a"
+            },
+            {
+              "property": "addressId",
+              "type": "string",
+              "identifier": "Oh2E1dBHfRox8ihmaukVc"
+            }
+          ],
+          "key": {
+            "properties": [
+              "Oh2E1dBHfRox8ihmaukVc"
+            ],
+            "name": ""
+          }
+        },
+        "n12": {
+          "label": "Address",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "addressId",
+              "type": "string",
+              "identifier": "OAIVyq7AkeENb1QkcFquA"
+            },
+            {
+              "property": "address",
+              "type": "string",
+              "identifier": "rQe33WamZeoDLAabUryUV"
+            },
+            {
+              "property": "city",
+              "type": "string",
+              "identifier": "M1swC_Li_s7AdTBfvkRMj"
+            },
+            {
+              "property": "region",
+              "type": "string",
+              "identifier": "XILlFzoWY-IDHRpTULBoq"
+            },
+            {
+              "property": "postalCode",
+              "type": "integer",
+              "identifier": "Qszb1lw932yGY_xu5pRGy"
+            },
+            {
+              "property": "country",
+              "type": "string",
+              "identifier": "4fwHX2vBeXX-iv6zmPj67"
+            },
+            {
+              "property": "companyName",
+              "type": "string",
+              "identifier": "BGmds33lg7nz2mJxXlsUZ"
+            }
+          ],
+          "key": {
+            "properties": [
+              "OAIVyq7AkeENb1QkcFquA"
+            ],
+            "name": ""
+          }
+        }
+      },
+      "relationshipSchemas": {
+        "n0": {
+          "type": "CONTAINS",
+          "sourceNodeSchema": "n6",
+          "targetNodeSchema": "n7",
+          "properties": []
+        },
+        "n1": {
+          "type": "SUPPLY",
+          "sourceNodeSchema": "n8",
+          "targetNodeSchema": "n7",
+          "properties": []
+        },
+        "n2": {
+          "type": "ARE_IN",
+          "sourceNodeSchema": "n7",
+          "targetNodeSchema": "n3",
+          "properties": []
+        },
+        "n3": {
+          "type": "SOLD",
+          "sourceNodeSchema": "n5",
+          "targetNodeSchema": "n6",
+          "properties": []
+        },
+        "n4": {
+          "type": "PLACED",
+          "sourceNodeSchema": "n4",
+          "targetNodeSchema": "n6",
+          "properties": []
+        },
+        "n5": {
+          "type": "EMP_DETAILS",
+          "sourceNodeSchema": "n5",
+          "targetNodeSchema": "n10",
+          "properties": []
+        },
+        "n6": {
+          "type": "SHIPPED_TO",
+          "sourceNodeSchema": "n6",
+          "targetNodeSchema": "n11",
+          "properties": []
+        },
+        "n7": {
+          "type": "LOCATED_AT",
+          "sourceNodeSchema": "n8",
+          "targetNodeSchema": "n12",
+          "properties": []
+        },
+        "n9": {
+          "type": "REPORTS_TO",
+          "sourceNodeSchema": "n5",
+          "targetNodeSchema": "n5",
+          "properties": []
+        }
+      }
+    },
+    "mappingModel": {
+      "nodeMappings": {
+        "n3": {
+          "nodeSchema": "n3",
+          "fileSchema": "processed-northwind-categories.csv",
+          "mappings": [
+            {
+              "field": "categoryID"
+            },
+            {
+              "field": "categoryName"
+            },
+            {
+              "field": "description"
+            }
+          ]
+        },
+        "n4": {
+          "nodeSchema": "n4",
+          "fileSchema": "processed-northwind-customers.csv",
+          "mappings": [
+            {
+              "field": "customerID"
+            },
+            {
+              "field": "contactName"
+            },
+            {
+              "field": "contactTitle"
+            },
+            {
+              "field": "phone"
+            },
+            {
+              "field": "fax"
+            }
+          ]
+        },
+        "n5": {
+          "nodeSchema": "n5",
+          "fileSchema": "processed-northwind-employees.csv",
+          "mappings": [
+            {
+              "field": "employeeID"
+            },
+            {
+              "field": "lastName"
+            },
+            {
+              "field": "firstName"
+            },
+            {
+              "field": "title"
+            },
+            {
+              "field": "reportsTo"
+            }
+          ]
+        },
+        "n6": {
+          "nodeSchema": "n6",
+          "fileSchema": "processed-northwind-orders.csv",
+          "mappings": [
+            {
+              "field": "orderID"
+            },
+            {
+              "field": "orderDate"
+            },
+            {
+              "field": "requiredDate"
+            },
+            {
+              "field": "freight"
+            },
+            {
+              "field": "shippedDate"
+            },
+            {
+              "field": "shipVia"
+            }
+          ]
+        },
+        "n7": {
+          "nodeSchema": "n7",
+          "fileSchema": "processed-northwind-products.csv",
+          "mappings": [
+            {
+              "field": "productID"
+            },
+            {
+              "field": "productName"
+            },
+            {
+              "field": "quantityPerUnit"
+            },
+            {
+              "field": "unitPrice"
+            },
+            {
+              "field": "discontinued"
+            }
+          ]
+        },
+        "n8": {
+          "nodeSchema": "n8",
+          "fileSchema": "processed-northwind-suppliers.csv",
+          "mappings": [
+            {
+              "field": "supplierID"
+            },
+            {
+              "field": "companyName"
+            },
+            {
+              "field": "contactName"
+            },
+            {
+              "field": "contactTitle"
+            },
+            {
+              "field": "phone"
+            },
+            {
+              "field": "fax"
+            },
+            {
+              "field": "homePage"
+            }
+          ]
+        },
+        "n10": {
+          "nodeSchema": "n10",
+          "fileSchema": "processed-northwind-employees.csv",
+          "mappings": [
+            {
+              "field": "employeeID"
+            },
+            {
+              "field": "birthDate"
+            },
+            {
+              "field": "hireDate"
+            },
+            {
+              "field": "address"
+            },
+            {
+              "field": "city"
+            },
+            {
+              "field": "region"
+            },
+            {
+              "field": "postalCode"
+            },
+            {
+              "field": "country"
+            },
+            {
+              "field": "homePhone"
+            },
+            {
+              "field": "extension"
+            },
+            {
+              "field": "notes"
+            },
+            {
+              "field": "photoPath"
+            },
+            {
+              "field": "titleOfCourtesy"
+            }
+          ]
+        },
+        "n11": {
+          "nodeSchema": "n11",
+          "fileSchema": "processed-northwind-orders.csv",
+          "mappings": [
+            {
+              "field": "shipName"
+            },
+            {
+              "field": "shipAddress"
+            },
+            {
+              "field": "shipCity"
+            },
+            {
+              "field": "shipRegion"
+            },
+            {
+              "field": "shipPostalCode"
+            },
+            {
+              "field": "shipCountry"
+            },
+            {
+              "field": "customerID"
+            }
+          ]
+        },
+        "n12": {
+          "nodeSchema": "n12",
+          "fileSchema": "processed-northwind-suppliers.csv",
+          "mappings": [
+            {
+              "field": "supplierID"
+            },
+            {
+              "field": "address"
+            },
+            {
+              "field": "city"
+            },
+            {
+              "field": "region"
+            },
+            {
+              "field": "postalCode"
+            },
+            {
+              "field": "country"
+            },
+            {
+              "field": "companyName"
+            }
+          ]
+        }
+      },
+      "relationshipMappings": {
+        "n0": {
+          "relationshipSchema": "n0",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "orderID"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "productID"
+            }
+          ],
+          "fileSchema": "processed-northwond-order-details.csv"
+        },
+        "n1": {
+          "relationshipSchema": "n1",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "supplierID"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "productID"
+            }
+          ],
+          "fileSchema": "processed-northwind-products.csv"
+        },
+        "n2": {
+          "relationshipSchema": "n2",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "productID"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "categoryID"
+            }
+          ],
+          "fileSchema": "processed-northwind-products.csv"
+        },
+        "n3": {
+          "relationshipSchema": "n3",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "employeeID"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "orderID"
+            }
+          ],
+          "fileSchema": "processed-northwind-orders.csv"
+        },
+        "n4": {
+          "relationshipSchema": "n4",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "customerID"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "orderID"
+            }
+          ],
+          "fileSchema": "processed-northwind-orders.csv"
+        },
+        "n5": {
+          "relationshipSchema": "n5",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "employeeID"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "employeeID"
+            }
+          ],
+          "fileSchema": "processed-northwind-employees.csv"
+        },
+        "n6": {
+          "relationshipSchema": "n6",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "orderID"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "customerID"
+            }
+          ],
+          "fileSchema": "processed-northwind-orders.csv"
+        },
+        "n7": {
+          "relationshipSchema": "n7",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "supplierID"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "supplierID"
+            }
+          ],
+          "fileSchema": "processed-northwind-suppliers.csv"
+        },
+        "n9": {
+          "relationshipSchema": "n9",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "employeeID"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "reportsTo"
+            }
+          ],
+          "fileSchema": "processed-northwind-employees.csv"
+        }
+      }
+    },
+    "configurations": {
+      "idsToIgnore": []
+    }
+  }
+}
