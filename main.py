@@ -18,6 +18,7 @@ def get_settings():
 URI = os.environ["URI"]
 USER = os.environ["USER"]
 PASSWORD = os.environ["PASSWORD"]
+DATABASE = os.environ["DATABASE"]
 driver = GraphDatabase.driver(URI, auth=(USER, PASSWORD))
 
 
@@ -42,7 +43,7 @@ def _add_products(tx, product):
 
 @app.post("/add_product/", tags=["insert-node"])
 async def add_products(product: Product):
-    with driver.session(database="neo4j") as session:
+    with driver.session(database=DATABASE) as session:
         result = session.write_transaction(
             _add_products, product)
     return result
@@ -64,7 +65,7 @@ def _delete_products(tx, product):
 
 @app.post("/delete_product/", tags=["delete-node"])
 async def delete_products(product: Product):
-    with driver.session(database="neo4j") as session:
+    with driver.session(database=DATABASE) as session:
         result = session.write_transaction(
             _delete_products, product)
     return result
@@ -83,7 +84,7 @@ def _get_nodes(tx, name):
 
 @app.get("/nodes/{name}")
 async def get_nodes(name: str):
-    with driver.session(database="neo4j") as session:
+    with driver.session(database=DATABASE) as session:
         result = session.read_transaction(_get_nodes, name)
     return result
 
@@ -101,7 +102,7 @@ def _get_sales_employee(tx, emp_id):
 
 @app.get("/sales/{employeeId}")
 async def get_sales_employee(employeeId: int):
-    with driver.session(database="neo4j") as session:
+    with driver.session(database=DATABASE) as session:
         result = session.read_transaction(_get_sales_employee, employeeId)
     return result
 
@@ -118,7 +119,7 @@ def _get_product_supplier(tx, prod_id):
 
 @app.get("/supplier/{prod_id}")
 async def get_product_supplier(prod_id: int):
-    with driver.session(database="neo4j") as session:
+    with driver.session(database=DATABASE) as session:
         result = session.read_transaction(_get_product_supplier, prod_id)
     return result
 
@@ -141,7 +142,7 @@ def _add_supplier(tx, supplier):
 
 @app.post("/supplier/", tags=["insert-node"])
 async def add_supplier(supplier: Supplier):
-    with driver.session(database="neo4j") as session:
+    with driver.session(database=DATABASE) as session:
         result = session.write_transaction(
             _add_supplier, supplier)
     return result
@@ -165,7 +166,7 @@ def _add_customer_purchase_order(tx, order, customer):
 
 @app.post("/purchase_order/", tags=["insert-relationship"])
 async def add_customer_purchase_order(order: Order, customer: Customer):
-    with driver.session(database="neo4j") as session:
+    with driver.session(database=DATABASE) as session:
         result = session.write_transaction(
             _add_customer_purchase_order, order, customer)
     return result
