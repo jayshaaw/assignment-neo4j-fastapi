@@ -6,6 +6,7 @@ import os
 import logging
 from config import Settings
 from models.models import Supplier, Order, Product, Customer
+from fastapi.responses import RedirectResponse
 
 app = FastAPI()
 
@@ -24,7 +25,7 @@ driver = GraphDatabase.driver(URI, auth=(USER, PASSWORD))
 
 @app.get("/")
 async def root(settings: Settings = Depends(get_settings)):
-    return {"App Name: ": settings.app_name}
+    return RedirectResponse(url='/docs')
 
 
 def _add_products(tx, product):
