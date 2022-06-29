@@ -1,0 +1,48 @@
+Count of Orders per Country
+    MATCH (c:Customer)-[:PLACED]->(o:Order),
+    (c)-[:LOCATED_AT]->(a:Address)
+    RETURN a.country AS Country, count(o.orderID) AS CountOfOrder
+    ORDER BY CountOfOrder DESC
+
+Count of Order SOLD per Employee
+    MATCH (e:Employee)-[:SOLD]->(o:Order)
+    RETURN e.employeeId,  e.firstName + " " + e.lastName AS Employee, count(o.orderID) AS CountOfOrders
+    ORDER BY CountOfOrders DESC
+
+Convert string to date
+    MATCH (o:Order)
+    SET o.orderDate = date(left(o.orderDate, 10))
+    RETURN o.orderDate
+
+SET default date
+    MATCH (o:Order {shippedDate: ""})
+    SET o.shippedDate = "9999-01-01"
+    RETURN o.shippedDate
+
+Convert string to date
+    MATCH (o:Order)
+    SET o.orderDate = date(left(o.orderDate, 10))
+    SET o.shippedDate = date(left(o.shippedDate, 10))
+    SET o.requiredDate = date(left(o.requiredDate, 10))
+    RETURN o.shippedDate
+    LIMIT 10
+
+Count of Order by year-month
+    MATCH (o:Order)
+    RETURN DISTINCT left(toString(o.orderDate),7) AS yearMonth, count(o.orderDate) AS countOfOrders
+    ORDER BY yearMonth ASC
+
+How many products do supplier have?
+    MATCH (s:Supplier)-[:SUPPLY]->(p:Product),
+    (s)-[:LOCATED_AT]->(a:Address)
+    RETURN s.companyName, a.country ,count(p.productID) AS CountOfProducts
+
+Add new supplier
+    MERGE (s:Supplier {supplierID:90001, companyName:'Jay Inc'})
+    RETURN s
+
+INSERT relationship
+    MATCH (s:Supplier {supplierID:90001})
+    MERGE (p:Product {productID:90001, discontinued:false, productName:'Tetly Tea', unitPrice:8, quantityPerUnit:'50 pack'})
+    MERGE (s)-[:SUPPLY]->(p)
+    RETURN p
