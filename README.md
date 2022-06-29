@@ -58,10 +58,13 @@ https://browser.graphapp.io
 ## Application Tree Structure
 
 ```
-app/
+app-neo4j-fastapi/
 ├── .env
+├── .gitignore
 ├── __init__.py
 ├── config.py
+├── cypher-queries/
+│   └── cypher.txt
 ├── files/
 │   ├── processed-northwind-categories.csv
 │   ├── processed-northwind-customers.csv
@@ -76,10 +79,11 @@ app/
 │   ├── data-importer.png
 │   ├── data-model.png
 │   └── neo_sandbox.png
+├── LICENSE
 ├── main.py
 ├── models/
 │   └── models.py
-├── neo4j_importer_model_2022-06-29.json
+├── neo4j_importer_model.json
 ├── pandas.ipynb
 ├── README.md
 └── requirements.txt
