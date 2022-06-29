@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  neo-fastapi:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8080:80"
