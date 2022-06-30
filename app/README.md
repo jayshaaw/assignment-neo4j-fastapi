@@ -143,6 +143,13 @@ uvicorn main:app --reload
 
 ***
 
+## Docker Image
+The application can be run using the Dockerfile.
+
+To start the Docker service
+- Set the credentials in ``/app/.env`` file
+- Run the docker compose ``docker compose up``
+
 
 
 
