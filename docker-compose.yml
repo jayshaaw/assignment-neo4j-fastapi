@@ -1,8 +1,14 @@
 version: "3.9"
 services:
   neo-fastapi:
+    container_name: neo-fastapi
     build:
-      context: .
+      context: ./
       dockerfile: ./Dockerfile
+    command: [ "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80" ]
+    expose:
+      - "80"
     ports:
-      - "8080:80"
+      - "80:80"
+    env_file:
+      - ./app/.env
