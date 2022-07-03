@@ -2,3 +2,5 @@ pydantic~=1.9.1
 fastapi~=0.78.0
 neo4j~=4.4.4
 uvicorn[standard]
+notebook~=6.4.12
+pytest~=7.1.2

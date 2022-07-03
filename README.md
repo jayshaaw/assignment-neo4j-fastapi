@@ -49,7 +49,7 @@ The data is ingested into Neo4j database by running the data importer.
 
 ## Neo4j browser graph app
 
-Neo4j browser app can used to run Cypher queries.
+Neo4j browser app can be used to run Cypher queries.
 
 https://browser.graphapp.io
 
@@ -114,15 +114,24 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Create Blank Database in Neo4j - https://sandbox.neo4j.com
-
-![neo_sandbox.png](images/neo_sandbox.png)
+4. Create Blank Database in Neo4j AuraDB - https://neo4j.com/cloud/platform/aura-graph-database/?ref=nav-get-started-cta
+   1. Down the credentials file if needed for reference
+![neo_sandbox.png](images/neo-sandbox.png)
 
 6. Import the Data Model JSON in Data Importer UI - https://data-importer.graphapp.io
-7. Connect Data Importer to Neo4j database
-8. Run Data Importer to ingest data into Neo4j database
+   1. Add files from `/files` folder
+   2. Open model `neo4j_importer_model.json`
+
+7. Run Data Importer to ingest data into Neo4j database
 
 ![data-importer-status.png](images/data-importer-status.png)
+
+8. Go back to the Neo4j AuraDB console and click Explore
+   1. This will open `https://browser.neo4j.io`
+   2. Enter the credentials 
+   3. Select the neo4j database 
+
+![img.png](images/select-database.png)
 
 10. Set Neo4j BOLT URL, username, password and database in ``.env`` file
 11. Run FastAPI application
