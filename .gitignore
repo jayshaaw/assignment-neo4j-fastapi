@@ -1,3 +1,4 @@
 /venv/*
 /ignore/
 *.pyc
+.ipynb_checkpoints
