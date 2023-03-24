@@ -29,7 +29,7 @@ relationship are as follows:
 
 Arrow App is used to create a Graph data model. The json export of the data model can be found in directory.
 
-![img.png](images/data-model.png)
+![img.jpg](images/data-model.jpg)
 
 ***
 
@@ -41,7 +41,7 @@ Neo4j Data importer can be accessed via below link:
 
 https://data-importer.graphapp.io
 
-![img_1.png](images/data-importer.png)
+![img_1.jpg](images/data-importer.jpg)
 
 The data is ingested into Neo4j database by running the data importer.
 
@@ -74,11 +74,11 @@ app-neo4j-fastapi/
 │   ├── processed-northwind-suppliers.csv
 │   └── processed-northwond-order-details.csv
 ├── images/
-│   ├── api-endpoints.png
-│   ├── data-importer-status.png
-│   ├── data-importer.png
-│   ├── data-model.png
-│   └── neo_sandbox.png
+│   ├── api-endpoints.jpg
+│   ├── data-importer-status.jpg
+│   ├── data-importer.jpg
+│   ├── data-model.jpg
+│   └── neo_sandbox.jpg
 ├── LICENSE
 ├── main.py
 ├── models/
@@ -116,7 +116,7 @@ pip install -r requirements.txt
 
 4. Create Blank Database in Neo4j AuraDB - https://neo4j.com/cloud/platform/aura-graph-database/?ref=nav-get-started-cta
    1. Down the credentials file if needed for reference
-![neo_sandbox.png](images/neo-sandbox.png)
+![neo_sandbox.jpg](images/neo-sandbox.jpg)
 
 6. Import the Data Model JSON in Data Importer UI - https://data-importer.graphapp.io
    1. Add files from `/files` folder
@@ -124,14 +124,14 @@ pip install -r requirements.txt
 
 7. Run Data Importer to ingest data into Neo4j database
 
-![data-importer-status.png](images/data-importer-status.png)
+![data-importer-status.jpg](images/data-importer-status.jpg)
 
 8. Go back to the Neo4j AuraDB console and click Explore
    1. This will open `https://browser.neo4j.io`
    2. Enter the credentials 
    3. Select the neo4j database 
 
-![img.png](images/select-database.png)
+![img.jpg](images/select-database.jpg)
 
 10. Set Neo4j BOLT URL, username, password and database in ``.env`` file
 11. Run FastAPI application
@@ -148,7 +148,7 @@ uvicorn main:app --reload
 
 13. Perform CRUD operations using the API endpoints
 
-![api-endpoints.png](images/api-endpoints.png)
+![api-endpoints.jpg](images/api-endpoints.jpg)
 
 ***
 
