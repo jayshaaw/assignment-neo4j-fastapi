@@ -148,7 +148,7 @@ uvicorn main:app --reload
 
 13. Perform CRUD operations using the API endpoints
 
-![api-endpoints.png](images/api-endpoints.png)
+![api-endpoints.png](images/api-endpoints.jpg)
 
 ***
 

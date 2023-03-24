@@ -1,4 +1,5 @@
 /venv/*
-/ignore/
+/ignore
+.idea
 *.pyc
 .ipynb_checkpoints
